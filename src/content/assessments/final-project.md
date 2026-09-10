@@ -1,38 +1,54 @@
 ---
-title: Final project
+title: "Capstone: The Market Audit"
 description:
-  The capstone — a placeholder brief for the larger piece of work the semester
-  builds towards
+  A market audit and redesign proposal for a case of your own choosing —
+  and the semester's required act of doubting its own model
 week: 12
-due: 2027-05-28T12:00:00+10:00
-weight: 60
+due: 2028-05-26T12:00:00+10:00
+weight: 40
 marking:
   mode: holistic
-  description:
-    The final project is judged as a whole against the brief, with particular
-    attention to whether the result stands alone and whether its scope fits the
-    semester that produced it.
+  description: >-
+    Judged as a whole against the brief — whether the market analysis is
+    rigorous and specific to the chosen case, whether the redesign is
+    genuinely incentive-compatible, and whether the closing critique
+    identifies something the market framework actually can't explain
+    rather than gesturing at limitations in general. A capstone that
+    applies the semester's tools well but never questions them, and one
+    that questions them without having applied them first, both fall
+    short of what this brief asks for.
 spec:
   - submitted by the deadline, in the format named below
   - it stands on its own, without you there to explain it
-  - it answers the brief rather than restating it
+  - it names a specific market failure in your chosen case, proposes a
+    specific redesign for it, and then argues for one thing the market
+    framework itself fails to capture about that same case
+related:
+  - assignment-1
+  - assignment-2
 ---
-
-<!-- STARTER_CONTENT: replace this assessment brief, then remove this comment. -->
-
-Replace this brief. The final project is where a course's weights usually
-concentrate, so it is worth being explicit about how the earlier work feeds it.
 
 ## The brief
 
-> One sentence, again as a blockquote.
+> Pick a case. Diagnose its market failure. Redesign the rule that causes
+> it. Then argue, specifically, for one thing this entire framework can't
+> see about your case.
 
-Say what scope is realistic in the time available. A brief that quietly assumes
-twice the available hours is the most common way a capstone goes wrong.
+The case can be fictional, historical, or a clearly hypothetical
+composite — not a real, identifiable person's real relationship. Structure
+follows the semester: search and information problems first, a proposed
+redesign second (drawing directly on Assignment 2's method), and a closing
+section that does what tutorial 12 rehearsed — names something the market
+model genuinely fails to explain about your case, argued specifically
+rather than as a general disclaimer that models have limits.
+
+A capstone that only executes the semester's tools well, or only critiques
+them without having executed anything, both undershoot the brief. It wants
+both, in that order.
 
 ## What you submit
 
-The artefact, and whatever a marker needs to run or read it.
-
-This one demonstrates the alternative marking mode: a holistic explanation
-rather than weighted criteria. The site renders either mode from frontmatter.
+A single document (or an equivalent artefact, if you've discussed a
+different format with your tutor) covering all three parts above. Whatever
+a marker needs to follow the argument without you in the room — this
+stands alone.

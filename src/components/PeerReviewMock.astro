@@ -1,0 +1,79 @@
+---
+// A static mockup of what Assignment 1's peer-review exercise feels like.
+// Every visitor sees the same fixed example profile; nothing here is
+// submitted, stored, or sent anywhere — the button is deliberately inert.
+const exampleProfile = {
+  name: "Persona 07 (fictional, assigned to everyone in this example)",
+  bio: "Runs marathons (photo attached, bib number visible). Says they 'love to cook' with no photo of any food. Lists 'looking for someone low-maintenance.'",
+};
+---
+
+<section class="peer-review-mock" aria-label="Peer review example">
+  <p class="profile-name">{exampleProfile.name}</p>
+  <p class="profile-bio">{exampleProfile.bio}</p>
+
+  <label for="audit">Your signal audit</label>
+  <textarea
+    id="audit"
+    name="audit"
+    rows={5}
+    placeholder="Which claims here are costly signals? Which are cheap talk? Say why."
+  ></textarea>
+
+  <button type="button" class="fake-submit" aria-disabled="true">
+    Submit review
+  </button>
+  <p class="fine-print">
+    This page is a demonstration, not a submission form. Nothing you type
+    here is saved, sent, or marked — the real exercise runs on the same
+    fixed example profile for every student, in tutorial 5.
+  </p>
+</section>
+
+<style>
+  .peer-review-mock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    margin-block: 1.5rem;
+    border: 1px solid var(--at-border, #ccc);
+    border-radius: 0.5rem;
+    background: var(--at-bg-alt);
+  }
+
+  .profile-name {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .profile-bio {
+    margin: 0;
+    color: var(--at-text-secondary);
+  }
+
+  textarea {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--at-border, #ccc);
+    resize: vertical;
+  }
+
+  .fake-submit {
+    align-self: flex-start;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--at-primary);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .fine-print {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--at-text-secondary);
+  }
+</style>
