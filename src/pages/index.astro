@@ -5,33 +5,36 @@ import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
-
-// STARTER_CONTENT: replace the hero artwork and its alt text below, then
-// remove this comment.
 ---
 
 <ContentLayout
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
   heroImage={heroImage}
-  heroImageAlt="A lecture theatre reduced to flat gold and black shapes, rows of seats sweeping past the frame, in a two-ink risograph print"
+  heroImageAlt="Two flat gold shapes meeting at a shared edge on warm cream, in a two-ink risograph print"
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
-  <!-- STARTER_CONTENT: replace the authored page below, then remove this comment. -->
   <h2>What you will do</h2>
   <p>
-    Say what a student spends their time on — the making, reading, arguing or
-    measuring that fills the weeks. Name the artefact they walk out with.
+    Twelve weeks of applying real market machinery — search costs,
+    signaling, screening, stable matching, bargaining, mechanism design — to
+    romantic relationships, treated as seriously as any other market this
+    department teaches. You'll design a fictional profile and defend its
+    signals, sit a midterm on what you'd actually say in the moment, redesign
+    a mechanism that's failing, and finish with an audit of a case of your
+    own choosing that also argues for what the model can't see.
   </p>
 
   <h2>Who it is for</h2>
   <p>
-    Say who this is aimed at and what they need to already know. Be specific
-    enough that someone can rule themselves in or out without emailing you.
+    Anyone who has taken an introductory microeconomics or game theory unit
+    and wants to see the tools pointed somewhere the textbook never does.
+    No personal dating history is assumed, required, or graded — every
+    assignment works on fictional personas and hypothetical cases.
   </p>
 
   <h2>Where to go next</h2>
