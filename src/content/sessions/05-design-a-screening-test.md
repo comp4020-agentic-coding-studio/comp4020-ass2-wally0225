@@ -1,0 +1,37 @@
+---
+title: Design a Screening Test
+description:
+  Groups design a screening mechanism that separates types by self-selection
+  — and Assignment 1 is due
+week: 5
+date: 2028-03-20
+teachers:
+  - sunk-costa
+spec:
+  - your group's mechanism offers a menu, not a direct question
+  - you can explain why a dishonest type would rationally choose
+    differently from an honest one under your menu
+  - Assignment 1 is submitted before the tutorial starts
+related:
+  - lectures/week-05
+  - assessments/assignment-1
+---
+
+## Before the tutorial
+
+Assignment 1 is due at the start of this session — submit it, then come
+ready to think about screening from the other side.
+
+## In the tutorial
+
+In groups, design a screening mechanism (a menu of options, not a question
+someone could just lie to) that would separate a type you care about from
+one you don't, purely through what people rationally choose. Present the
+menu to another group and let them try to break it.
+
+## Afterwards
+
+A mechanism that gets broken in the room is more useful than one that
+survives unchallenged — note what broke it and why, since that's exactly
+the failure mode Assignment 2's redesign brief asks you to avoid later in
+the semester.
