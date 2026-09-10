@@ -1,23 +1,34 @@
 ---
-title: Second lecture
+title: "Discovery & Search Costs"
 description:
-  Week 2 — the first substantive material, and the run-up to the first review
+  Why looking for a partner is a search problem, and why every search
+  technology changes the answer
 week: 2
-date: 2027-03-01
+date: 2028-02-28
 teachers:
-  - idris-fenn
+  - sunk-costa
 related:
-  - sessions/02-first-review
-  - assessments/assignment-1
+  - sessions/02-search-technology
 ---
 
-<!-- STARTER_CONTENT: replace this lecture, then remove this comment. -->
+Search has a cost: time spent evaluating one candidate is time not spent
+finding a better one, and the moment you stop looking is a decision, even
+when it doesn't feel like one. A search technology — a friend group, a
+workplace, an app — doesn't just supply candidates, it sets the cost of
+finding them, and the cost function determines the strategy that makes
+sense.
 
-Replace this page. It exists so the lectures listing sorts by week and the
-related block has more than one edge to draw.
+This is the week that reframes "why is dating so exhausting" as a
+modeling question rather than a complaint: a lower per-candidate search
+cost doesn't just mean more options, it changes what an optimal stopping
+rule looks like. Week 6 does the math properly; this week sets up why the
+math matters.
 
 ## Outline
 
-- the first substantive material, and where it shows up in practice
-- what the first review is looking for
-- reading before next week
+- search cost as a function of channel: cost per candidate, signal quality,
+  false positive rate
+- why "more options" is not obviously an improvement
+- the difference between a search problem and a matching problem, and why
+  this course spends three more weeks on the former before it earns the
+  latter

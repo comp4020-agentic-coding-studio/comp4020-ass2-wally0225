@@ -1,0 +1,82 @@
+---
+title: Stable Matching
+description: Week 8 — walking the Gale–Shapley algorithm by hand
+---
+
+{/* _class: impact */}
+
+# Stable Matching
+
+Gale–Shapley, worked example
+
+---
+
+## The setup
+
+Two sides, A and B, three members each. Everyone ranks everyone on the
+other side. A matching is **stable** if no pair on opposite sides would
+both rather be matched to each other than to their current match.
+
+---
+
+## The algorithm
+
+1. Every unmatched proposer offers to their top remaining choice
+2. Each receiver holds its best offer so far, rejects the rest
+3. Rejected proposers cross that name off and propose again
+4. Repeat until nobody is rejected
+
+Finite, terminates, always stable. That's the theorem.
+
+---
+
+## Round 1
+
+| Proposer | Offers | Held by receiver |
+|----------|--------|-------------------|
+| A1 | B2 | B2 tentatively holds A1 |
+| A2 | B1 | B1 tentatively holds A2 |
+| A3 | B2 | B2 compares A3 to A1, keeps the better, rejects the other |
+
+---
+
+## Round 2
+
+The rejected proposer crosses off the receiver that turned them down and
+offers to their next-ranked choice. Their previous holder may now be
+displaced in turn.
+
+Repeat until every receiver holds exactly one proposer and nobody is
+mid-rejection.
+
+---
+
+{/* _class: quote */}
+
+> Stable does not mean happy. It means nobody has an incentive to break
+> the arrangement, given what everyone else is doing.
+
+---
+
+## What the theorem doesn't say
+
+- nothing about proposer-optimal vs. receiver-optimal outcomes being equal
+- nothing about the surplus once matched — that's week 9
+- nothing about what happens when preferences change after matching
+
+---
+
+{/* _class: banner */}
+
+## Tutorial 8
+
+Run the algorithm by hand on a fresh preference table. Compare what you get
+proposing from side A against proposing from side B.
+
+---
+
+{/* _class: impact */}
+
+# Congratulations
+
+You found a stable match. Now decide who does the dishes.
