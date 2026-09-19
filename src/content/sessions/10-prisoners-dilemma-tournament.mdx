@@ -15,6 +15,8 @@ related:
   - lectures/week-10
 ---
 
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
 ## Before the tutorial
 
 Come with a strategy in mind: a rule for cooperate/defect against an
@@ -32,3 +34,18 @@ to see the folk theorem produce a result instead of just stating one.
 Whatever won, ask what made it exploitable or not, and what that implies
 for how much a negotiated split (week 9) actually needs enforcement versus
 how much it enforces itself.
+
+## Printable handout
+
+<TutorialHandout
+  week={10}
+  title="Iterated Prisoner's Dilemma Tournament"
+  date={new Date("2028-05-01")}
+  bring={["A cooperate/defect strategy you can state in one sentence"]}
+  agenda={[
+    "Submit your strategy before round one starts",
+    "Every strategy plays every other strategy across many rounds, tallied live",
+    "Identify which strategy won and, in outline, why",
+    "Debrief: what made the winner exploitable or not, and what that implies for how much a negotiated split (week 9) needs enforcement",
+  ]}
+/>
