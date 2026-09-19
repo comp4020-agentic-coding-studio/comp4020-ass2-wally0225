@@ -18,6 +18,8 @@ related:
   - assessments/final-project
 ---
 
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
 ## Before the tutorial
 
 Look back over the semester's running example you've carried since
@@ -35,3 +37,18 @@ discomfort.
 
 This discussion is the direct rehearsal for the capstone's own required
 act of self-doubt — bring what came up here into that final piece of work.
+
+## Printable handout
+
+<TutorialHandout
+  week={12}
+  title="Post-Mortem"
+  date={new Date("2028-05-15")}
+  bring={["Your running example from tutorial 1, and how it's held up since"]}
+  agenda={[
+    "Round one: what did the market framework explain well this semester?",
+    "Round two: what did it visibly fail to explain — name a specific case, not a vague discomfort",
+    "State the difference between those two without hedging into \"it depends\"",
+    "Debrief: carry what came up here into the capstone's own required act of self-doubt",
+  ]}
+/>
