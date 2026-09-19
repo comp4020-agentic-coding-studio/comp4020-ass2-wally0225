@@ -1,60 +1,135 @@
 ---
 title: Stable Matching
-description: Week 8 — walking the Gale–Shapley algorithm by hand
+description: Week 8 — Gale–Shapley, worked both directions
 ---
 
 {/* _class: impact */}
 
 # Stable Matching
 
-Gale–Shapley, worked example
+Gale–Shapley, worked both directions
 
 ---
 
-## The setup
+## Three ideas, before anything else
 
-Two sides, A and B, three members each. Everyone ranks everyone on the
-other side. A matching is **stable** if no pair on opposite sides would
-both rather be matched to each other than to their current match.
+- stable matching
+- deferred acceptance
+- proposer-optimal
 
----
-
-## The algorithm
-
-1. Every unmatched proposer offers to their top remaining choice
-2. Each receiver holds its best offer so far, rejects the rest
-3. Rejected proposers cross that name off and propose again
-4. Repeat until nobody is rejected
-
-Finite, terminates, always stable. That's the theorem.
+Get these three straight now — the worked example runs on all three.
 
 ---
 
-## Round 1
+## Stable matching
 
-| Proposer | Offers | Held by receiver |
-|----------|--------|-------------------|
-| A1 | B2 | B2 tentatively holds A1 |
-| A2 | B1 | B1 tentatively holds A2 |
-| A3 | B2 | B2 compares A3 to A1, keeps the better, rejects the other |
+Six people pair off. It doesn't have to make anyone thrilled — it just has
+to survive contact with temptation: no one currently paired should be able
+to find someone else who'd *also* rather be with them than their own
+current match.
+
+That no-mutual-regret property is **stability**, and a matching that has
+it is a **stable matching**.
 
 ---
 
-## Round 2
+## Deferred acceptance
 
-The rejected proposer crosses off the receiver that turned them down and
-offers to their next-ranked choice. Their previous holder may now be
-displaced in turn.
+When someone asks you out and you're not sure, "yes, for now" is a
+reasonable answer — you're free to trade up later if someone better asks,
+and whoever you're currently seeing finds out by being the one who gets
+let go.
 
-Repeat until every receiver holds exactly one proposer and nobody is
-mid-rejection.
+That's exactly how this week's algorithm works, and it has a name:
+**deferred acceptance** — every "yes" is provisional until nobody better
+shows up.
+
+---
+
+## Proposer-optimal
+
+Here's the twist: whichever side does the asking, as a group, ends up with
+the best partner they could possibly get in *any* stable arrangement.
+Asking isn't just brave — it's structurally an advantage.
+
+Economists call that result **proposer-optimality**, and it's the sharpest
+claim this week's theorem makes.
+
+---
+
+{/* _class: banner */}
+
+## Now, back to the point
+
+A small matchmaking pool: three Askers, three Matches. Everyone ranks
+everyone on the other side. We'll run it once with the Askers proposing,
+then run the *exact same preferences* with the Matches proposing instead.
+
+---
+
+## The preferences
+
+| Asker | 1st choice | 2nd choice | 3rd choice |
+|---|---|---|---|
+| Robin | Jordan | Casey | Morgan |
+| Sam | Casey | Jordan | Morgan |
+| Drew | Jordan | Casey | Morgan |
+
+| Match | 1st choice | 2nd choice | 3rd choice |
+|---|---|---|---|
+| Jordan | Sam | Robin | Drew |
+| Casey | Robin | Sam | Drew |
+| Morgan | Robin | Sam | Drew |
+
+---
+
+## Run 1: Askers propose
+
+| Round | Proposals | What happens |
+|---|---|---|
+| 1 | Robin→Jordan, Sam→Casey, Drew→Jordan | Jordan prefers Robin to Drew — holds Robin, rejects Drew. Casey holds Sam. |
+| 2 | Drew→Casey (his next choice) | Casey prefers Sam to Drew — keeps Sam, rejects Drew. |
+| 3 | Drew→Morgan (his last choice) | Morgan's only offer — holds Drew. |
+
+**Result: Robin–Jordan, Sam–Casey, Drew–Morgan.** Robin and Sam both got
+their first choice.
+
+---
+
+## Run 2: Matches propose instead
+
+Same six people, same preferences — just flip who does the asking.
+
+| Round | Proposals | What happens |
+|---|---|---|
+| 1 | Jordan→Sam, Casey→Robin, Morgan→Robin | Robin prefers Casey to Morgan — holds Casey, rejects Morgan. Sam holds Jordan. |
+| 2 | Morgan→Sam (her next choice) | Sam prefers Jordan to Morgan — keeps Jordan, rejects Morgan. |
+| 3 | Morgan→Drew (her last choice) | Drew's only offer — holds Morgan. |
+
+**Result: Robin–Casey, Sam–Jordan, Drew–Morgan.**
+
+---
+
+## Same people, same preferences, different outcome
+
+| Person | Askers propose | Matches propose |
+|---|---|---|
+| Robin | Jordan (1st choice) | Casey (2nd choice) |
+| Sam | Casey (1st choice) | Jordan (2nd choice) |
+| Jordan | Robin (2nd choice) | Sam (1st choice) |
+| Casey | Sam (2nd choice) | Robin (1st choice) |
+| Drew / Morgan | matched to each other, either way | matched to each other, either way |
+
+Both matchings are genuinely stable. Whoever proposes does better, as a
+group, than whoever receives — every single time.
 
 ---
 
 {/* _class: quote */}
 
 > Stable does not mean happy. It means nobody has an incentive to break
-> the arrangement, given what everyone else is doing.
+> the arrangement, given what everyone else is doing — and it means the
+> side that asked got the better half of that arrangement.
 
 ---
 
@@ -71,7 +146,19 @@ mid-rejection.
 ## Tutorial 8
 
 Run the algorithm by hand on a fresh preference table. Compare what you get
-proposing from side A against proposing from side B.
+proposing from side A against proposing from side B — you've just seen why
+they won't match.
+
+---
+
+## What today doesn't settle
+
+The theorem proves the proposing side does better, but says nothing about
+how a real market decides who plays that role. Week 7 couldn't explain who
+breaks a standoff; this week, whoever a market simply *labels* the
+proposer wins the same way, unearned.
+
+**Week 12 is where this, and every prior week's gap, come back at once.**
 
 ---
 
@@ -80,3 +167,5 @@ proposing from side A against proposing from side B.
 # Congratulations
 
 You found a stable match. Now decide who does the dishes.
+
+Week 9: Household Bargaining

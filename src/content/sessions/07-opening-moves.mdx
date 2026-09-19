@@ -16,6 +16,8 @@ related:
   - assessments/midterm
 ---
 
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
 ## Before the tutorial
 
 Review week 7's lecture on initiation and bargaining. No written prep.
@@ -32,3 +34,18 @@ using the same format under exam conditions.
 Feedback on the midterm is returned the following week, alongside week 8's
 material — by design, so you move straight from "what would you say" to
 "what happens once you've said it and it worked."
+
+## Printable handout
+
+<TutorialHandout
+  week={7}
+  title="Opening Moves"
+  date={new Date("2028-04-10")}
+  bring={["Week 7's lecture, reviewed beforehand — no written prep required"]}
+  agenda={[
+    "Warm-up drills in the midterm's own format, worked through as a group with reasoning made explicit",
+    "Name the concept each drill is testing (war of attrition, coordination under incomplete information, signaling cost)",
+    "The midterm itself: twenty items, sat under exam conditions in this session",
+    "Feedback returns next week, alongside week 8's material",
+  ]}
+/>

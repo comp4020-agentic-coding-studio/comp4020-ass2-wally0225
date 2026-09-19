@@ -16,6 +16,8 @@ related:
   - lectures/week-08
 ---
 
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
 ## Before the tutorial
 
 Bring the week 8 deck's worked example fresh in mind — this session repeats
@@ -33,3 +35,18 @@ If the two runs gave different matches — they usually do — you've just
 demonstrated the proposer-optimal / receiver-optimal asymmetry yourself,
 which sets up week 9's question directly: stability was never the whole
 story.
+
+## Printable handout
+
+<TutorialHandout
+  week={8}
+  title="Run Gale–Shapley by Hand"
+  date={new Date("2028-04-17")}
+  bring={["The week 8 deck's worked example, fresh in mind"]}
+  agenda={[
+    "In pairs, run the algorithm by hand on a fresh preference table: propose, hold, reject, repeat until every match is final",
+    "Swap which side proposes and re-run on the exact same preferences",
+    "Compare the two outcomes and find at least one person whose match changed",
+    "Debrief: this is the proposer-optimal / receiver-optimal asymmetry, demonstrated rather than just claimed",
+  ]}
+/>

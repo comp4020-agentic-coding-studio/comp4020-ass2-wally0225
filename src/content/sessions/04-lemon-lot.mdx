@@ -18,6 +18,8 @@ related:
   - lectures/week-04
 ---
 
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
 ## Before the tutorial
 
 Nothing to prepare — the personas and their partial information sheets are
@@ -36,3 +38,17 @@ the population — the mechanism, not just the moral.
 If you found yourself reasoning "the fact that they're still available is
 itself information," you've derived adverse selection from the exercise
 rather than being told about it — which is the point.
+
+## Printable handout
+
+<TutorialHandout
+  week={4}
+  title="Lemon Lot"
+  date={new Date("2028-03-13")}
+  agenda={[
+    "You're handed a lot of fictional personas — visible attributes only, hidden ones stay hidden",
+    "Choose who you'd pair with, based on what's visible",
+    "Compare notes with someone who saw a different subset of the same lot",
+    "The reveal shows why the pool looked the way it did — the mechanism, not just the moral",
+  ]}
+/>

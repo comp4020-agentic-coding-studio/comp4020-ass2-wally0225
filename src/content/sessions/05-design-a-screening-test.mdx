@@ -17,6 +17,8 @@ related:
   - assessments/assignment-1
 ---
 
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
 ## Before the tutorial
 
 Assignment 1 is due at the start of this session — submit it, then come
@@ -35,3 +37,18 @@ A mechanism that gets broken in the room is more useful than one that
 survives unchallenged — note what broke it and why, since that's exactly
 the failure mode Assignment 2's redesign brief asks you to avoid later in
 the semester.
+
+## Printable handout
+
+<TutorialHandout
+  week={5}
+  title="Design a Screening Test"
+  date={new Date("2028-03-20")}
+  bring={["Assignment 1, submitted before the tutorial starts"]}
+  agenda={[
+    "In groups, design a menu — not a question — that separates a type you care about from one you don't",
+    "Check that the menu is incentive-compatible: the honest type must actually prefer their option, the dishonest type must actually not want to copy it",
+    "Present your menu to another group and let them try to break it",
+    "Note what broke it and why — this is the failure mode Assignment 2's redesign brief asks you to avoid",
+  ]}
+/>

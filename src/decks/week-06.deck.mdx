@@ -1,0 +1,119 @@
+---
+title: The Secretary Problem
+description: Week 6 — the one week with an exact answer, and what it doesn't cover
+---
+
+{/* _class: impact */}
+
+# The Secretary Problem
+
+The one week this semester where the answer is exact
+
+---
+
+## Three ideas, before anything else
+
+- optimal stopping
+- the 1/e rule
+- no recall
+
+Get these three straight now — the scenario in a minute uses all of them.
+
+---
+
+## Optimal stopping
+
+You're not choosing the best person you'll ever meet. You're choosing when
+to stop meeting new people and commit to one, knowing you can't go back to
+someone you already passed on.
+
+Economists call that decision **optimal stopping**: the problem isn't who
+to pick, it's when to stop looking.
+
+---
+
+## No recall
+
+Once you've moved on from someone — stopped replying, let the moment pass —
+you don't get to circle back and choose them later. They've moved on too.
+
+That constraint is **no recall**, and it's what makes the problem hard: you
+can't sample now and decide later.
+
+---
+
+## The 1/e rule
+
+Given no recall and no idea how good later options will be, there's an
+exact answer: spend the first ~37% of your expected dating life purely
+gathering information — reject everyone, on principle — then commit to the
+next person who beats everyone you've seen so far.
+
+That threshold is the **1/e rule** (37% ≈ 1/e). It's not a guess. It's the
+provably best strategy against an unknown distribution.
+
+---
+
+{/* _class: banner */}
+
+## Now, back to the point
+
+You expect to date roughly 20 people before settling down. Person #8 is the
+best one yet. Do you commit?
+
+---
+
+## Running the rule
+
+| Step | What happens |
+|---|---|
+| Expected pool | 20 people |
+| Information-only phase | first ~7-8 (37% of 20) — reject everyone, just calibrate |
+| Commit phase | from #8 onward, accept the first person who beats everyone seen so far |
+| Person #8 | is inside the commit phase, and the best so far — the rule says yes |
+
+---
+
+## Why "you'll know when you know" fails
+
+Gut instinct has no phase boundary — it says commit the moment someone
+feels right, which might be person #2, before you've seen enough of the
+distribution to know what "right" should even mean relative to.
+
+The 1/e rule beats intuition specifically by making the calibration phase
+mandatory, not optional.
+
+---
+
+{/* _class: quote */}
+
+> The rule doesn't tell you who to pick. It tells you how much looking is
+> enough before an opinion means anything.
+
+---
+
+{/* _class: banner */}
+
+## Tutorial 6
+
+Run the simulator against your own gut strategy first, then against the
+1/e rule. The gap between the two is the actual content of the week.
+
+---
+
+## What today doesn't settle
+
+The rule optimizes your stopping decision alone. It has no term for whether
+the person you stop on would also stop on you — every guarantee here
+quietly assumes the choice only runs one way.
+
+**Week 8 starts answering that. Week 12 is where this, and Weeks 1, 3, 4,
+and 5's gaps, all come back at once.**
+
+---
+
+{/* _class: impact */}
+
+# See you next week
+
+Week 7: The Cost of Asking

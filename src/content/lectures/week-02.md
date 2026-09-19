@@ -7,6 +7,7 @@ week: 2
 date: 2028-02-28
 teachers:
   - sunk-costa
+slides: /decks/week-02/
 related:
   - sessions/02-search-technology
 ---
@@ -32,3 +33,21 @@ math matters.
 - the difference between a search problem and a matching problem, and why
   this course spends three more weeks on the former before it earns the
   latter
+
+## Further reading
+
+The search-cost framing above isn't new to this course; it's the founding
+move of an entire field of economics:
+
+- Stigler, G. J. (1961).
+  ["The Economics of Information."](https://home.uchicago.edu/~vlima/courses/econ200/spring01/stigler.pdf)
+  _Journal of Political Economy_, 69(3), 213–225. The paper that first
+  treated "finding out prices" as an economic activity with its own cost,
+  rather than something markets simply hand you for free.
+- Roth, A. E. (2008).
+  ["What Have We Learned from Market Design?"](https://www.nber.org/papers/w13530.pdf)
+  _The Economic Journal_, 118(527), 285–310. The source of "thickness,
+  congestion, and safety" as the three things a marketplace needs — and of
+  the specific claim behind today's "more options isn't obviously better"
+  slide: a thicker market can fail on congestion even when it doesn't fail
+  on numbers.

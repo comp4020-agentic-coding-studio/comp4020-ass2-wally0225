@@ -1,0 +1,165 @@
+---
+// A printable one-page (A4) handout for a tutorial: what to bring, what
+// happens in the room, in that order. Print/PDF button triggers the
+// browser's own print dialog — no PDF-generation dependency, no network
+// call, nothing saved.
+interface Props {
+  week: number;
+  title: string;
+  date: Date;
+  bring?: string[];
+  agenda: string[];
+}
+
+const { week, title, date, bring = [], agenda } = Astro.props;
+const dateLabel = date.toLocaleDateString("en-AU", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<div class="handout-wrap">
+  <button type="button" class="print-button no-print" onclick="window.print()">
+    Print this handout (A4)
+  </button>
+
+  <article class="handout" aria-label={`Tutorial ${week} handout`}>
+    <header>
+      <p class="kicker">SLOP2470 — Tutorial {week} handout</p>
+      <h3>{title}</h3>
+      <p class="date">{dateLabel}</p>
+    </header>
+
+    {
+      bring.length > 0 && (
+        <section>
+          <h4>Bring</h4>
+          <ul>
+            {bring.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section>
+      <h4>What happens in the room</h4>
+      <ol>
+        {agenda.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ol>
+    </section>
+
+    <footer>
+      <p>SLOP2470: Love, Markets, and Other Failures</p>
+    </footer>
+  </article>
+</div>
+
+<style>
+  .handout-wrap {
+    margin-block: 1.5rem;
+  }
+
+  .print-button {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--at-border, #ccc);
+    border-radius: 999px;
+    background: var(--at-bg-alt);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .handout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--at-border, #ccc);
+    border-radius: 0.5rem;
+    background: var(--at-bg-alt);
+  }
+
+  .kicker {
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--at-text-secondary);
+  }
+
+  header h3 {
+    margin: 0.25rem 0 0;
+  }
+
+  .date {
+    margin: 0.25rem 0 0;
+    color: var(--at-text-secondary);
+  }
+
+  section h4 {
+    margin: 0 0 0.4rem;
+  }
+
+  section ul,
+  section ol {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  footer {
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--at-border, #ccc);
+    font-size: 0.85rem;
+    color: var(--at-text-secondary);
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  @media print {
+    /* Printing this component only: remove every other direct child of
+       the page's main content area (rather than just hiding it with
+       visibility), so no leftover flow height forces a second, blank
+       or duplicated page. position:fixed is deliberately avoided here —
+       fixed content repeats on every printed page, which is what caused
+       the duplicate-page overlap this replaces. */
+    :global(.at-main > *) {
+      display: none !important;
+    }
+
+    :global(.at-main > .handout-wrap) {
+      display: block !important;
+    }
+
+    .handout-wrap {
+      margin: 0;
+    }
+
+    .no-print {
+      display: none;
+    }
+
+    .handout {
+      border: none;
+      border-radius: 0;
+      background: white;
+      color: black;
+      padding: 0;
+      break-inside: avoid;
+    }
+
+    @page {
+      size: A4;
+      margin: 18mm;
+    }
+  }
+</style>

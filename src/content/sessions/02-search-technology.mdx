@@ -1,0 +1,61 @@
+---
+title: Map Your Search Technology
+description:
+  Model a fictional persona's discovery channel as a cost function, not as
+  a list of tips
+week: 2
+date: 2028-02-28
+teachers:
+  - sunk-costa
+spec:
+  - you've modeled a fictional persona's discovery channel as a cost
+    function — rough cost per candidate, signal quality, false-positive
+    rate — even if the numbers are guesses, they're written down
+  - you've done the same for a second, different channel for the same
+    persona, so two cost functions sit side by side, not one
+  - you can point to the specific number that differs between the two and
+    say which stopping rule it flips, not just that "the strategy changes"
+related:
+  - lectures/week-02
+---
+
+import TutorialHandout from "../../components/TutorialHandout.astro";
+
+## Before the tutorial
+
+Read week 2's lecture. Have a fictional persona in mind — reused from
+tutorial 1 or invented fresh.
+
+## In the tutorial
+
+Working in pairs, pick one persona and sketch **two** different discovery
+channels for them as cost functions: time per candidate, signal quality,
+how often a promising lead turns out not to be one. Put the two side by
+side and find the one number that's different enough to flip the optimal
+strategy — screen harder before meeting, or say yes sooner. Swap with
+another pair and check that your "flipping number" survives their
+challenge.
+
+## Afterwards
+
+This is deliberately not "how to use dating apps better." The channel is a
+parameter, not the point — the point is being able to say precisely which
+number changed and which decision it changed.
+
+## Printable handout
+
+<TutorialHandout
+  week={2}
+  title="Map Your Search Technology"
+  date={new Date("2028-02-28")}
+  bring={[
+    "A fictional persona — reused from tutorial 1, or invented fresh",
+    "Two different discovery channels in mind for them (an app, a friend group, a workplace)",
+  ]}
+  agenda={[
+    "Pairs pick one persona and sketch two channels as cost functions: cost per candidate, signal quality, false-positive rate",
+    "Put the two cost functions side by side and find the one number that's different enough to flip the strategy",
+    "Swap with another pair and pressure-test whether that 'flipping number' actually holds",
+    "You leave with two written cost functions and a named number that changes the stopping rule between them",
+  ]}
+/>
