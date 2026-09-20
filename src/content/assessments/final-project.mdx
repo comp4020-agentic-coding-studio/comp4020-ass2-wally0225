@@ -7,16 +7,144 @@ week: 12
 due: 2028-05-26T12:00:00+10:00
 weight: 40
 marking:
-  mode: holistic
-  description: >-
-    Judged as a whole against the brief — whether the market analysis is
-    rigorous and specific to the chosen case, whether the redesign is
-    genuinely incentive-compatible, and whether the closing critique
-    identifies something the market framework actually can't explain
-    rather than gesturing at limitations in general. A capstone that
-    applies the semester's tools well but never questions them, and one
-    that questions them without having applied them first, both fall
-    short of what this brief asks for.
+  mode: weighted
+  criteria:
+    - name: Diagnose
+      weight: 30
+      levels:
+        - label: Perfect (HD)
+          description:
+            The market failure is diagnosed with complete precision — the
+            specific search, signalling, or information problem is named
+            and traced exactly through the chosen case.
+        - label: Excellent (HD)
+          description:
+            Rigorous, case-specific diagnosis naming the exact mechanism
+            at work.
+        - label: Very Good (D)
+          description:
+            Strong diagnosis that clearly identifies the relevant market
+            failure and applies it to the case in detail.
+        - label: Good (C)
+          description:
+            Thoughtful diagnosis naming a plausible market failure and
+            connecting it to the case.
+        - label: Satisfactory (P)
+          description:
+            A market failure is identified and named, though the
+            connection to the specific case is somewhat generic.
+        - label: Borderline (P)
+          description:
+            Diagnosis gestures at a market failure without precisely
+            naming the mechanism.
+        - label: Unsatisfactory (F)
+          description:
+            No clear market failure is identified, or the one named
+            doesn't fit the case.
+        - label: Poor (F)
+          description:
+            No diagnosis attempted, or it merely restates the case as a
+            problem without economic content.
+        - label: Not Shown (0)
+          description: Section not submitted.
+    - name: Redesign
+      weight: 30
+      levels:
+        - label: Perfect (HD)
+          description:
+            The redesign is a genuinely incentive-compatible mechanism,
+            argued with the same rigor Assignment 2 required, specific to
+            the diagnosed failure.
+        - label: Excellent (HD)
+          description:
+            A precise, well-argued redesign that clearly draws on the
+            semester's mechanism-design method.
+        - label: Very Good (D)
+          description: A solid redesign with a clear incentive argument for why it works.
+        - label: Good (C)
+          description: A specific redesign is proposed with reasonable justification.
+        - label: Satisfactory (P)
+          description:
+            A redesign is proposed, though the incentive-compatibility
+            argument is thin.
+        - label: Borderline (P)
+          description: The redesign is closer to advice than a mechanism.
+        - label: Unsatisfactory (F)
+          description:
+            No real redesign is proposed, or it doesn't address the
+            diagnosed failure.
+        - label: Poor (F)
+          description:
+            Redesign section is missing or entirely disconnected from the
+            diagnosis.
+        - label: Not Shown (0)
+          description: Section not submitted.
+    - name: Critique
+      weight: 30
+      levels:
+        - label: Perfect (HD)
+          description:
+            Names a precise, specific thing the market framework cannot
+            explain about this exact case — genuinely doubts its own model
+            rather than gesturing at limits.
+        - label: Excellent (HD)
+          description:
+            A sharp, case-specific critique that goes well beyond a
+            general disclaimer.
+        - label: Very Good (D)
+          description: A clear, specific gap in the framework is identified and argued.
+        - label: Good (C)
+          description:
+            A thoughtful critique naming a real limitation, argued for the
+            case at hand.
+        - label: Satisfactory (P)
+          description:
+            A limitation is named, though the argument for it being
+            specific to this case is thin.
+        - label: Borderline (P)
+          description: Critique reads as a generic "models have limits" disclaimer.
+        - label: Unsatisfactory (F)
+          description:
+            No genuine critique offered, or it undermines the redesign
+            rather than the framework.
+        - label: Poor (F)
+          description: Critique section missing or entirely generic.
+        - label: Not Shown (0)
+          description: Section not submitted.
+    - name: The case is playful, not just correct
+      weight: 10
+      levels:
+        - label: Perfect (HD)
+          description:
+            The case is a small comic universe — specific, inventive, and
+            executed with a completely straight face; reading it is a
+            pleasure independent of the mark it earns.
+        - label: Excellent (HD)
+          description:
+            The case is genuinely inventive and committed to its own
+            premise, with real wit in the details.
+        - label: Very Good (D)
+          description:
+            The case shows real imagination and a light touch, beyond the
+            minimum needed to make the argument work.
+        - label: Good (C)
+          description:
+            The case is well-chosen and has at least one genuinely
+            delightful detail.
+        - label: Satisfactory (P)
+          description: The case is competent and specific, without much personality.
+        - label: Borderline (P)
+          description: The case is generic — it works, but reads like a placeholder.
+        - label: Unsatisfactory (F)
+          description:
+            The case is thin enough that any market failure could be
+            substituted in without changing a word.
+        - label: Poor (F)
+          description:
+            No real case is chosen — the argument floats free of any
+            specific, invented scenario.
+        - label: Not Shown (0)
+          description: No capstone submitted.
 spec:
   - submitted by the deadline, in the format named below
   - it stands on its own, without you there to explain it

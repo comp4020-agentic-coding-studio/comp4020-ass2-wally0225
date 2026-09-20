@@ -10,7 +10,7 @@ marking:
   mode: weighted
   criteria:
     - name: Reads the situation correctly
-      weight: 50
+      weight: 45
       levels:
         - label: Perfect (HD)
           description:
@@ -42,7 +42,7 @@ marking:
         - label: Not Shown (0)
           description: Paper not attempted.
     - name: Response is defensible under the week's theory
-      weight: 50
+      weight: 45
       levels:
         - label: Perfect (HD)
           description:
@@ -74,6 +74,33 @@ marking:
             right one.
         - label: Poor (F)
           description: Responses are confident guesses with no theoretical grounding.
+        - label: Not Shown (0)
+          description: Paper not attempted.
+    - name: The line actually lands
+      weight: 10
+      levels:
+        - label: Perfect (HD)
+          description:
+            Every response is something you'd genuinely enjoy receiving —
+            correct and charming at once.
+        - label: Excellent (HD)
+          description: Most responses are both theoretically sound and genuinely appealing.
+        - label: Very Good (D)
+          description: Several responses are memorably good, not just technically correct.
+        - label: Good (C)
+          description: Responses are pleasant and show some wit alongside the theory.
+        - label: Satisfactory (P)
+          description:
+            Responses are serviceable — correct, but nobody's laughing or
+            blushing.
+        - label: Borderline (P)
+          description:
+            Responses read like they were reverse-engineered from the
+            rubric, not said out loud.
+        - label: Unsatisfactory (F)
+          description: Responses are awkward or stilted regardless of their theoretical grounding.
+        - label: Poor (F)
+          description: Responses would end the conversation, theory notwithstanding.
         - label: Not Shown (0)
           description: Paper not attempted.
 spec:

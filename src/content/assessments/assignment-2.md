@@ -10,7 +10,7 @@ marking:
   mode: weighted
   criteria:
     - name: The redesign is incentive-compatible
-      weight: 50
+      weight: 45
       levels:
         - label: Perfect (HD)
           description:
@@ -49,7 +49,7 @@ marking:
         - label: Not Shown (0)
           description: No redesign submitted.
     - name: You show, concretely, how it survives an attempt to game it
-      weight: 50
+      weight: 45
       levels:
         - label: Perfect (HD)
           description:
@@ -84,6 +84,34 @@ marking:
           description: No evidence the rule was pressure-tested at all.
         - label: Not Shown (0)
           description: No worked example submitted.
+    - name: Your mechanism has a name worth citing
+      weight: 10
+      levels:
+        - label: Perfect (HD)
+          description:
+            The redesigned rule is distinctive enough, and named well
+            enough, that it could plausibly be cited by name in a future
+            tutorial.
+        - label: Excellent (HD)
+          description: The mechanism has a clear identity and a name that captures what it does.
+        - label: Very Good (D)
+          description: The mechanism is memorable, even if the name itself is unpolished.
+        - label: Good (C)
+          description: The mechanism has a workable name and a bit of personality.
+        - label: Satisfactory (P)
+          description:
+            The mechanism is functional but forgettable — it works, nobody
+            will remember it by name.
+        - label: Borderline (P)
+          description: The mechanism is described rather than named — "the rule" throughout.
+        - label: Unsatisfactory (F)
+          description: No attempt to give the mechanism an identity of its own.
+        - label: Poor (F)
+          description:
+            The mechanism is indistinguishable from a restatement of the
+            problem.
+        - label: Not Shown (0)
+          description: No redesign submitted.
 spec:
   - submitted by the deadline, in the format named below
   - the mechanism you propose is stated as a rule, not a hope ("be

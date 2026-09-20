@@ -10,7 +10,7 @@ marking:
   mode: weighted
   criteria:
     - name: Signal design
-      weight: 60
+      weight: 50
       levels:
         - label: Perfect (HD)
           description:
@@ -80,6 +80,37 @@ marking:
             profile itself.
         - label: Not Shown (0)
           description: No audit submitted.
+    - name: The profile is charming, not just accurate
+      weight: 10
+      levels:
+        - label: Perfect (HD)
+          description:
+            The profile would genuinely get a match — every line is
+            engaging as well as classifiable, no filler.
+        - label: Excellent (HD)
+          description:
+            Charming and specific throughout; reads like a real (if
+            fictional) person, not a case study.
+        - label: Very Good (D)
+          description:
+            Mostly charming, with a clear voice and at least one memorable
+            line.
+        - label: Good (C)
+          description: Pleasant to read, with some personality beyond the minimum.
+        - label: Satisfactory (P)
+          description:
+            Functional but flat — the claims classify fine, but nobody's
+            swiping.
+        - label: Borderline (P)
+          description:
+            Reads like a checklist of cheap talk and costly signals rather
+            than a person.
+        - label: Unsatisfactory (F)
+          description: Dry to the point of being hard to follow as a profile at all.
+        - label: Poor (F)
+          description: No attempt at voice or personality — pure taxonomy.
+        - label: Not Shown (0)
+          description: No profile submitted.
 spec:
   - submitted by the deadline, in the format named below
   - every persona in the submission is fictional — no real profile, yours
