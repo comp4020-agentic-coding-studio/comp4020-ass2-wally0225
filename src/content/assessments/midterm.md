@@ -11,8 +11,71 @@ marking:
   criteria:
     - name: Reads the situation correctly
       weight: 50
+      levels:
+        - label: Perfect (HD)
+          description:
+            Every item's situation is read with precision — the response
+            matches exactly what the scenario calls for, with no items
+            misjudged.
+        - label: Excellent (HD)
+          description:
+            Near-complete accuracy in reading situations, with only the
+            hardest items showing any hesitation.
+        - label: Very Good (D)
+          description: Strong situational judgement across almost all items.
+        - label: Good (C)
+          description: Most items are read correctly, with a few misjudged.
+        - label: Satisfactory (P)
+          description:
+            Situations are read correctly often enough to show the
+            underlying judgement is sound.
+        - label: Borderline (P)
+          description:
+            Situational reading is inconsistent — right about as often as
+            wrong.
+        - label: Unsatisfactory (F)
+          description:
+            Situations are frequently misread, in ways suggesting the
+            prompt wasn't understood.
+        - label: Poor (F)
+          description: Responses show little sign of reading the situation at all.
+        - label: Not Shown (0)
+          description: Paper not attempted.
     - name: Response is defensible under the week's theory
       weight: 50
+      levels:
+        - label: Perfect (HD)
+          description:
+            Every response is backed by the exact concept the item is
+            testing, correctly named and correctly applied.
+        - label: Excellent (HD)
+          description:
+            Nearly every response names and correctly applies the relevant
+            concept.
+        - label: Very Good (D)
+          description:
+            Most responses are defended with the correct concept, clearly
+            applied.
+        - label: Good (C)
+          description:
+            Responses are generally defensible, with the concept named
+            though not always precisely applied.
+        - label: Satisfactory (P)
+          description:
+            Concepts are named for most items, with defensible reasoning
+            behind at least half.
+        - label: Borderline (P)
+          description:
+            Concepts are named inconsistently, or applied to the wrong
+            item.
+        - label: Unsatisfactory (F)
+          description:
+            Few responses name a concept, and where named it's rarely the
+            right one.
+        - label: Poor (F)
+          description: Responses are confident guesses with no theoretical grounding.
+        - label: Not Shown (0)
+          description: Paper not attempted.
 spec:
   - sat in tutorial 7, under exam conditions, in the time allowed
   - every response names the concept (war of attrition, signaling cost,
