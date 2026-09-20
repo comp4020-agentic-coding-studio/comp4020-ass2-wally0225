@@ -3,66 +3,70 @@
 ## What I built
 
 `SLOP2470: Love, Markets, and Other Failures` — a 2000-level course that
-treats romantic relationships as a market and spends twelve weeks running
-real search/signaling/screening/matching/bargaining/mechanism-design theory
-against that subject instead of the usual housing or labour examples. It's a
-straight-faced course site (lectures, tutorials, four assessments summing to
-100%, two people, two working slide decks) built on the shared starter
-template, with a static, clearly-inert mockup of the peer-review exercise
-Assignment 1 asks students to sit.
+treats romantic relationships as a market and spends twelve weeks running real
+search/signaling/screening/matching/bargaining/mechanism-design theory against
+that subject instead of the usual housing or labour examples. Lectures,
+tutorials, four assessments summing to 100%, two instructor personas, two
+working slide decks, and a static, clearly-inert mockup of the peer-review
+exercise Assignment 1 asks students to sit — plus, after a second pass, a
+nine-level performance rubric on every assessment and a running joke in every
+week that had gone quiet.
 
 ## How I got here
 
-The content itself came out of a long design conversation before any file was
-touched: picking the market-failure framing, laying out a 4-act/12-week arc,
-locking the assessment weights (15/30/15/40), deciding every profile exercise
-in the course must run on fictional personas only, and choosing the two
-instructor personas. None of that back-and-forth is a commit — it's the
-reasoning behind every choice below.
+The market-failure framing, the 4-act/12-week arc, the locked assessment
+weights (15/30/15/40), and the two instructor personas came out of a design
+conversation before any file was touched. Once fixed, I asked the agent to
+scope an implementation plan rather than start writing content directly, so
+the site's shape was agreed before its content was. The initial five build
+commits each answer one piece of that plan — config, people, and regenerated
+images; twelve lecture pages and two real decks; twelve tutorials replacing
+the starter's two; four assessments plus the peer-review mockup; and real
+copy on every static page
+([`9d69ab8...ae53302`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/compare/9d69ab8...ae53302)).
 
-Once the design was fixed, I asked the agent to scope an implementation plan
-rather than start writing files directly, so the shape of the site was agreed
-before the content was. That plan is what the five build commits below each
-correspond to, in order:
+## Making the rubrics actually markable
 
-> scope me an implementation plan now
+A plain criterion/weight table technically satisfies "assessment structure
+totaling 100%," but I wanted a marker — or a student, before submitting — to
+be able to tell an HD attempt from a pass without guessing. I handed the agent
+a screenshot of an unrelated rubric with a nine-level HD-to-not-shown scale and
+asked it to reuse that *structure*, not its content, against this course's own
+criteria. It extended the marking schema with an optional `levels` field so
+assessments without it kept rendering the old simple table, then wrote all
+nine levels for Assignment 1's two criteria
+([`6e89ef2`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/6e89ef2)),
+then Assignment 2's and the midterm's.
 
-- [`9d69ab8`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/9d69ab8) —
-  course code, dates, tags, the tutorial-label rename, the two instructor
-  personas (reusing the existing portrait art under new identities so the
-  visual theme didn't need to change), and regenerated hero/card images built
-  as flat-shape SVG art in the theme's own palette via `sharp` (no image-gen
-  CLI was available, so a one-off Node script rasterized hand-written SVG
-  instead).
-- [`31f282e`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/31f282e) —
-  all twelve lecture pages, dated and assigned to whichever instructor owns
-  that half of the semester, plus a rewritten week-1 deck and a new week-8
-  deck walking through Gale-Shapley by hand.
-- [`ddc010b`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/ddc010b) —
-  the starter's two tutorials replaced with twelve, one per lecture, each
-  with a person-judged spec line rather than a vague "discuss this."
-- [`ea76b80`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/ea76b80) —
-  the four assessments and the static `PeerReviewMock` component embedded in
-  Assignment 1, which one reviewer flagged mid-build as needing to be
-  obviously non-functional (no click handler, an explicit "this is a
-  demonstration, not a submission form" line) rather than a half-wired form.
-- [`ae53302`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/ae53302) —
-  the leftover developer-facing placeholder copy on the home, lectures,
-  sessions, assessments, and policies pages replaced with real text.
+## Making it funnier without losing the point
 
-I knew the result was right because `pnpm check` — typecheck, build, and
-`spec/assignment-2.test.ts` + `spec/data-integrity.test.ts` — passed clean
-after the full set of content existed
-([`97be574...ae53302`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/compare/97be574...ae53302)),
-and because `pnpm dev` showed the peer-review mockup, a lecture page, and the
-assessments listing rendering as intended before I called it done.
+I kept returning to one instruction: this course's voice is a deliberate
+straight-faced joke, and losing it flattens the submission, not just the tone.
+The capstone's single holistic paragraph became four weighted criteria, one of
+them "the case is playful, not just correct," and I asked for a matching
+playful criterion — tailored to what each assessment specifically tests, not
+one joke copy-pasted four times — on Assignment 1, Assignment 2, and the
+midterm too
+([`79cd6fa`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/79cd6fa)).
+
+Before calling it done, I asked the agent to re-read all twelve weeks together
+for coherence and tone, flagging anywhere the humour had gone missing. It
+found a typo'd course tag, a "won't explain" callback repeated nearly verbatim
+across weeks 7–11 (undercutting week 12's own payoff instead of building it),
+and five flatter weeks with no comic voice at all. Fixing that meant trimming
+the repeat down to one real setup, correcting a gap-count the repetition had
+let go stale, and giving weeks 2, 6, and 10, plus five tutorials, a running
+bit tied to the actual mechanism rather than sitting next to it
+([`9d20945`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-wally0225/commit/9d20945)).
+
+I knew the result was right because `pnpm check` passed clean after each
+round, and because I looked at the rendered pages, not just the diff.
 
 ## Before you ship
 
-`pnpm check:evidence` verifies that this comment is gone, that your citations
-resolve to real commits, that a crit week's reflection entry is in
-`reflections/`, and that your `CLAUDE.md` is there. It checks that your account
-is traceable, not that it is good: that is the marker's call.
+`pnpm check:evidence` verifies that this comment is gone, that citations
+resolve to real commits, and that `CLAUDE.md` is present. It checks that this
+account is traceable, not that it is good — that is the marker's call.
 
 Images aren't checked: unlike a citation whose SHA doesn't resolve, a broken
 image is visible the moment this file is rendered on GitHub.
