@@ -42,3 +42,9 @@ attached.
 
 Nothing beyond the sat paper — this is completed in tutorial 7, on paper
 or on the class laptops, in the time allotted. No take-home component.
+
+## How to prepare
+
+A [six-item mock set](/assessments/midterm-prep/), one per week 2–7
+concept, each with a model response that names the concept it's applying —
+the same format as the real paper, worked through in the open.

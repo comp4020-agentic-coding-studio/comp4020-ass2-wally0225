@@ -1,0 +1,209 @@
+---
+title: Midterm Prep Set
+description:
+  Six mock midterm items, one per week 2–7 concept, each with a model
+  response and the concept it's naming
+heroTitle: Midterm Prep Set
+---
+
+import { Image } from "astro:assets";
+import concertPhoto from "../../assets/images/mock-photo-concert.avif";
+import fairPhoto from "../../assets/images/mock-photo-fair.avif";
+import selfiePhoto from "../../assets/images/mock-photo-selfie.avif";
+
+Six mock items, built the same way the real midterm is: a fictional
+profile or scenario, a prompt, and a model response that names the concept
+it's applying. None of this is the real paper — the real one has twenty
+items, sat under exam conditions in tutorial 7 — but the format,
+difficulty, and one-sentence-naming-the-concept requirement are all real.
+Work through these cold before you check the model responses.
+
+One concept per item, drawn once each from weeks 2 through 7 — the real
+paper repeats concepts across its twenty items, this one doesn't need to.
+
+## 1. About Me — the disciplined swiper
+
+**Scenario.** A profile's About Me section: *"I don't have time to swipe
+through hundreds of profiles, so if you're reading this, congrats — you
+made the shortlist. I go on one date a week, max, because more than that
+and I stop paying attention to any of them."*
+
+**Prompt.** What does this bio tell you about this person's search
+strategy, and is it working in their favor?
+
+**Model response.** This isn't just confidence-signalling — it's a search
+cost argument. Evaluating a candidate properly takes attention, and
+attention split across too many candidates at once degrades the quality of
+every single evaluation. Capping search at one date a week is a deliberate
+choice to keep the cost of evaluating each candidate low enough that the
+evaluation stays informative, not a claim about how desirable they are.
+
+**Concept.** Search costs (Week 2) — the cost of evaluating each
+additional candidate, and why more search isn't automatically better
+search.
+
+## 2. About Me — the résumé bio
+
+**Scenario (straight).** *"Marathon runner, home cook, fluent in Spanish.
+Ask me about my sourdough starter."*
+
+**Prompt.** Which claims here are cheap talk, and which are costly
+signals?
+
+**Model response.** "Fluent in Spanish" and "marathon runner" are costly
+signals — both are hard to fake convincingly in conversation or at a
+meetup, and harder still to sustain a lie about under follow-up questions
+(splits, pace, verb conjugations). "Ask me about my sourdough starter" is
+cheap talk dressed up as an invitation: it costs nothing to write, and only
+becomes a signal once someone actually asks and gets a real, detailed
+answer back — the signal lives in the response, not the invitation.
+
+**Scenario (funnier).** *"Certified scuba diver, published poet, once
+fought a goose and won."*
+
+**Prompt.** Same instructions.
+
+**Model response.** "Certified scuba diver" is a costly signal — the
+certification is a verifiable, hard-to-fake credential. "Published poet"
+is only weakly costly, since "published" costs almost nothing to bluff
+about vaguely. "Once fought a goose and won" is cheap talk elevated to
+entertainment: it's unverifiable, but that's the point — it isn't trying to
+signal the claim itself, it's signalling that they don't take the
+bio-as-résumé format seriously, and that's informative on its own terms.
+
+**Concept.** Cheap talk vs. costly signal (Week 3).
+
+## 3. Profile photo — the only photo they chose
+
+<Image
+  src={concertPhoto}
+  alt="A flat two-ink illustration of a stage lit by beams of light, a crowd with raised hands, and two figures in a shoulder-carry pose wearing a wristband, in front of a blurred festival lineup poster."
+  widths={[400, 800, 1200]}
+  sizes="(min-width: 768px) 700px, 100vw"
+/>
+
+**Scenario (straight).** A profile's only photo: mid-laugh, on someone's
+shoulders, wristband still on, unmistakably at a concert — and, based on
+the blurred lineup poster visible in the background, weeks old.
+
+**Prompt.** What does choosing this as the only photo tell you, and what's
+the adverse-selection risk in trusting it?
+
+**Model response.** The photo signals an active, socially connected life
+at the moment it was taken — but one flattering photo from one high-energy
+night is a lot like a car dealer's lot photo taken in ideal light: true,
+but not necessarily representative of the median day. Good nights and bad
+nights aren't equally likely to get photographed and posted, so the photos
+you see oversample the good ones. That's adverse selection in the photo
+market, not necessarily deception.
+
+<Image
+  src={fairPhoto}
+  alt="A flat two-ink illustration of a figure in full pirate costume with a tricorne hat and crossed cutlasses, standing beside an unrelated figure in a peacock costume, in a car park setting."
+  widths={[400, 800, 1200]}
+  sizes="(min-width: 768px) 700px, 100vw"
+/>
+
+**Scenario (funnier).** A profile's only photo: full pirate costume,
+cutlass raised, at what the background reveals is a Renaissance fair car
+park — next to someone in a full peacock costume who is never explained
+anywhere in the profile.
+
+**Prompt.** Same instructions.
+
+**Model response.** Same adverse-selection logic, doing double duty as a
+costly signal of a specific personality type. The photo is a poor estimate
+of what a random Tuesday with this person looks like — but choosing to
+lead with it, unexplained, ahead of any more "normal" photo, is itself
+informative: they're selecting for people who won't need the peacock
+explained to them.
+
+**Concept.** Adverse selection (Week 4) — the photos you see are a
+selected, not random, sample of a person's life.
+
+## 4. Profile photo — the outdated set
+
+<Image
+  src={selfiePhoto}
+  alt="A flat two-ink illustration of a rounded mirror frame reflecting a simplified figure holding up a thick-bezeled phone to take a low-light selfie, with a dim wash across the scene."
+  widths={[400, 800, 1200]}
+  sizes="(min-width: 768px) 700px, 100vw"
+/>
+
+**Scenario.** A profile has six photos. Five are more than three years
+old — tagged, geotagged, or just obviously dated by hairstyle and camera
+quality. The sixth, clearly recent, is a low-light, unflattering mirror
+selfie.
+
+**Prompt.** What screening problem does this profile pose to a viewer, and
+what's the efficient response to it?
+
+**Model response.** The viewer can't verify current appearance directly,
+and the poster has no incentive to volunteer it if it's worse than three
+years ago — so this isn't a profile to take at face value, it's a
+screening problem. The efficient move isn't to reason from the old photos
+(irrelevant) or the bad new one (uninformative, given the lighting) — it's
+to design a screen: propose a video call or a same-week meetup before
+investing further, forcing a revelation of current information that a
+static photo set can't be trusted to provide.
+
+**Concept.** Screening (Week 5) — designing a low-cost test that separates
+types the photos alone can't.
+
+## 5. Offline — the birthday party
+
+**Scenario (straight).** At a friend's birthday party, you're introduced
+to someone genuinely compelling in conversation forty minutes into the
+night. The party has three more hours to go, more guests are still
+arriving, and you don't know who else might show up.
+
+**Prompt.** Should you keep talking to them, or "keep circulating" in case
+someone better is still to arrive? Name the concept.
+
+**Model response.** This is optimal stopping under the same constraint as
+the secretary problem: you can't recall a candidate once you've moved
+past them — you can't credibly return to "so, before, when we were
+talking..." after visibly working the room for two hours — and you don't
+know the full distribution of who's still arriving. Forty minutes into a
+several-hour party with an unknown future applicant pool puts you well
+within the "keep exploring" phase of the stopping rule in expectation —
+but if this candidate clears whatever bar your accumulated experience says
+is "clearly top tier," the rule says stop searching and commit, not wait
+for a hypothetical better one.
+
+**Scenario (funnier).** Same party, except the "genuinely compelling
+conversation" is with someone who has spent all forty minutes doing a bit
+where they are, apparently, a marine biologist who has never seen the
+ocean.
+
+**Prompt.** Same instructions.
+
+**Model response.** Doesn't change the math, changes the input: the
+secretary problem doesn't grade the candidate's quality for you, it only
+tells you when to stop searching once you've decided they clear your bar.
+If a forty-minute-commitment bit clears your bar, the model says stop
+circulating — it has no opinion on whether your bar should be that low,
+and it won't bail you out of that decision later.
+
+**Concept.** The secretary problem / optimal stopping (Week 6).
+
+## 6. Offline — the standoff
+
+**Scenario.** You've been talking for twenty minutes and it's going well.
+Nobody has suggested exchanging numbers. Both of you keep finding reasons
+to stay in the conversation instead of leaving to get another drink.
+
+**Prompt.** Why might neither person be the one to ask, even though both
+apparently want the same outcome? Name the concept.
+
+**Model response.** Asking first isn't free — it means revealing interest
+before knowing it's reciprocated, and eating the cost of a visible
+rejection if it isn't. Both people would prefer the other absorb that
+initiation cost while they get the same outcome for free; staying in the
+conversation is a way of signalling willingness without paying to make it
+explicit. The standoff resolves only when one side's cost of asking drops
+below their cost of continued uncertainty — or someone runs out of
+drink-getting excuses.
+
+**Concept.** The cost of asking / initiation cost (Week 7) — why a
+standoff can persist even when both sides want the same resolution.
