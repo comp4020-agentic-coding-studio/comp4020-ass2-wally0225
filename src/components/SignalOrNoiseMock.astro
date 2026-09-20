@@ -1,5 +1,5 @@
 ---
-// A static mockup of what Assignment 1's peer-review exercise feels like.
+// A static mockup of tutorial 3's "Signal or Noise?" sorting exercise.
 // Every visitor sees the same fixed example profile; nothing here is
 // submitted, stored, or sent anywhere — the button is deliberately inert.
 const exampleProfile = {
@@ -8,7 +8,7 @@ const exampleProfile = {
 };
 ---
 
-<section class="peer-review-mock" aria-label="Peer review example">
+<section class="signal-sort-mock" aria-label="Signal or Noise sorting exercise example">
   <p class="profile-name">{exampleProfile.name}</p>
   <p class="profile-bio">{exampleProfile.bio}</p>
 
@@ -21,17 +21,17 @@ const exampleProfile = {
   ></textarea>
 
   <button type="button" class="fake-submit" aria-disabled="true">
-    Submit review
+    Submit sort
   </button>
   <p class="fine-print">
     This page is a demonstration, not a submission form. Nothing you type
-    here is saved, sent, or marked — the real exercise runs on the same
-    fixed example profile for every student, in tutorial 5.
+    here is saved, sent, or marked — the real exercise runs on a fixed set
+    of claims for every student, in tutorial 3, before Assignment 1 is due.
   </p>
 </section>
 
 <style>
-  .peer-review-mock {
+  .signal-sort-mock {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
