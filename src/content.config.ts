@@ -8,11 +8,22 @@ const courseNodeLoader = (dir: string) =>
   glob({ pattern: ["**/*.{md,mdx}", "!**/CLAUDE.md"], base: `src/content/${dir}` });
 const teacherRefs = z.array(reference("people")).min(1);
 
+const rubricLevel = z.object({
+  label: z.string().trim().min(1),
+  description: z.string().trim().min(1),
+});
+
 const weightedMarking = z
   .object({
     mode: z.literal("weighted"),
     criteria: z
-      .array(z.object({ name: z.string().trim().min(1), weight: z.number().positive() }))
+      .array(
+        z.object({
+          name: z.string().trim().min(1),
+          weight: z.number().positive(),
+          levels: z.array(rubricLevel).min(1).optional(),
+        }),
+      )
       .min(1),
   })
   .superRefine((marking, ctx) => {

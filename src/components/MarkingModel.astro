@@ -1,7 +1,18 @@
 ---
+interface RubricLevel {
+  label: string;
+  description: string;
+}
+
+interface WeightedCriterion {
+  name: string;
+  weight: number;
+  levels?: RubricLevel[];
+}
+
 interface WeightedMarking {
   mode: "weighted";
-  criteria: { name: string; weight: number }[];
+  criteria: WeightedCriterion[];
 }
 
 interface HolisticMarking {
@@ -14,12 +25,40 @@ interface Props {
 }
 
 const { marking } = Astro.props;
+
+// When every criterion carries the same rubric levels, render them as a
+// matrix (levels as columns) instead of the plain weight table.
+const levelLabels =
+  marking.mode === "weighted" && marking.criteria.every((criterion) => criterion.levels)
+    ? marking.criteria[0].levels!.map((level) => level.label)
+    : null;
 ---
 
 <section aria-labelledby="how-marked">
   <h2 id="how-marked">How it is marked</h2>
   {marking.mode === "holistic" ? (
     <p>{marking.description}</p>
+  ) : levelLabels ? (
+    <div class="rubric-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Criterion</th>
+            <th scope="col">Weight</th>
+            {levelLabels.map((label) => <th scope="col">{label}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {marking.criteria.map((criterion) => (
+            <tr>
+              <td>{criterion.name}</td>
+              <td>{criterion.weight}%</td>
+              {criterion.levels!.map((level) => <td>{level.description}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   ) : (
     <table>
       <thead><tr><th scope="col">Criterion</th><th scope="col">Weight</th></tr></thead>
@@ -31,3 +70,18 @@ const { marking } = Astro.props;
     </table>
   )}
 </section>
+
+<style>
+  .rubric-scroll {
+    overflow-x: auto;
+  }
+
+  .rubric-scroll table {
+    min-width: 60rem;
+  }
+
+  .rubric-scroll th,
+  .rubric-scroll td {
+    vertical-align: top;
+  }
+</style>
