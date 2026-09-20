@@ -20,6 +20,9 @@ spec:
     to follow it to the letter
   - you demonstrate at least one specific attempt to game your own rule,
     and how the design survives it
+  - you name the specific concept (incentive compatibility, mechanism
+    design, screening, etc.) each part of your argument is applying — not
+    just an answer
 related:
   - assignment-1
   - final-project
@@ -40,8 +43,9 @@ draft, have someone try to break it, and revise from what they find.
 
 ## What you submit
 
-The case, the current rule and its failure, your redesigned rule, and a
-worked example of someone trying to game the new rule and failing to
-usefully do so. Show your attempt at breaking your own rule before anyone
-else's — markers can tell the difference between a rule that was
-pressure-tested and one that wasn't.
+A single document, roughly 800–1,200 words: the case, the current rule and
+its failure, your redesigned rule, and a worked example of someone trying
+to game the new rule and failing to usefully do so. Name the concept behind
+each part of the argument as you go. Show your attempt at breaking your own
+rule before anyone else's — markers can tell the difference between a rule
+that was pressure-tested and one that wasn't.
