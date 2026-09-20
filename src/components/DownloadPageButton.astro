@@ -1,0 +1,35 @@
+---
+// A "download" button for a content page: triggers the browser's own
+// print-to-PDF dialog, matching TutorialHandout's approach — no
+// PDF-generation dependency, no network call, nothing saved server-side.
+// The theme already hides nav/sidebar/footer under @media print, so this
+// button only needs to hide itself.
+interface Props {
+  label?: string;
+}
+
+const { label = "Download this page (PDF)" } = Astro.props;
+---
+
+<button type="button" class="download-page-button no-print" onclick="window.print()">
+  {label}
+</button>
+
+<style>
+  .download-page-button {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--at-border, #ccc);
+    border-radius: 999px;
+    background: var(--at-bg-alt);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  @media print {
+    .no-print {
+      display: none;
+    }
+  }
+</style>
