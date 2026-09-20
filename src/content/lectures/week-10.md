@@ -49,6 +49,15 @@ the last round. What actually holds a negotiated split together over time
 is this week's shadow of the future: the expectation of enough future
 rounds that breaking the deal now costs more than whatever it gains.
 
+Priya and Theo, several months into whatever week 6 started, supply this
+week's running case: Theo has a standing habit of forgetting to text when
+he's running late, and Priya has settled — without ever deciding to,
+exactly — into a functioning tit-for-tat, one noticeably cool reply after
+a missed heads-up, full warmth restored the instant the next one arrives
+on time. Neither of them has read Axelrod. Both of them are, completely
+unknowingly, playing the equilibrium the folk theorem predicts should be
+stable.
+
 ## Outline
 
 - one-shot vs. repeated games, and why only defection survives once
@@ -76,8 +85,7 @@ which of many possible relationships two people end up spending years
 inside — forgiving or grim, cooperative or locked in retaliation, with the
 same starting conditions each time. Whatever actually picks one of these
 in practice (a couple's own history, an explicit conversation, plain
-personality) is, once again, coming from outside the game. Week 12 is
-where this, and every prior week's gap, come back at once.
+personality) is, once again, coming from outside the game.
 
 ## Further reading
 

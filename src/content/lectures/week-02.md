@@ -25,6 +25,15 @@ cost doesn't just mean more options, it changes what an optimal stopping
 rule looks like. Week 6 does the math properly; this week sets up why the
 math matters.
 
+Take Priya, who meets people almost exclusively through her state trivia
+league — five new candidates a year, tops, but every one of them has
+already self-selected for showing up on a Tuesday night and knowing who
+wrote *Middlemarch*. Her flatmate Dev runs six apps at once and reports
+"matches" the way other people report weather. Same underlying market,
+two completely different cost functions — and, as this week argues, two
+completely different optimal strategies follow from that difference
+alone, before either of them has said a single charming thing to anyone.
+
 ## Outline
 
 - search cost as a function of channel: cost per candidate, signal quality,

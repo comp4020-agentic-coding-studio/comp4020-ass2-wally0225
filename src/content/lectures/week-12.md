@@ -28,13 +28,15 @@ too — except this time, the stakes of being believed are the whole
 relationship, not just who pays more rent.
 
 Then the semester turns the model on itself, on purpose. Every week since
-week 7 has ended with the same sentence — "the model can't say who decides"
-— under a different name: who breaks a standoff, who gets labelled the
-proposer, whose outside-option claim gets believed, which equilibrium two
-people settle into, who designs the rule. Collected side by side, those
-aren't nine separate gaps. They're one variable — bargaining power — that
-this semester's toolkit never had a term for, showing up nine times under
-nine different names.
+week 7 has circled back to one unresolved question — "the model can't say
+who decides" — under a different name: who breaks a standoff, who gets
+labelled the proposer, whose outside-option claim gets believed, which
+equilibrium two people settle into, who designs the rule. Collected side
+by side, those aren't five separate gaps, and they're not even the first
+five: weeks 1, 3, 4, 5, and 6 were quietly asking the same question the
+whole time. They're one variable — bargaining power — that this semester's
+toolkit never had a term for, showing up ten times under ten different
+names.
 
 That's the shape of the self-doubt this week asks for, and it's also the
 shape of the capstone: not "the model is wrong," which is too easy to say
@@ -48,7 +50,7 @@ that for us, not the other way around.
   Alex and Sam's decision to stay or leave
 - why identical facts can produce different outcomes once bargaining power
   is added to Nash bargaining
-- collecting nine weeks of "the model can't say who decides" into one
+- collecting ten weeks of "the model can't say who decides" into one
   missing variable
 - what naming bargaining power still doesn't explain — where it comes from
 - the capstone brief, and what "stands on its own" means for a project
@@ -62,8 +64,8 @@ itself comes from: why one partner's threat to leave is credible and the
 other's isn't, why one person's outside-option claim gets believed and
 another's doesn't. Naming the gap was always easier than closing it.
 
-Laid end to end, this course's nine "the model can't say who decides"
-moments were never nine separate failures. Week 7 couldn't say who breaks
+Laid end to end, this course's ten "the model can't say who decides"
+moments were never ten separate failures. Week 7 couldn't say who breaks
 a standoff. Week 8 couldn't say who gets labelled the proposer. Week 9
 couldn't say whose outside-option claim gets believed. Week 10 couldn't
 say which of many equilibria two people settle into. Week 11 couldn't say

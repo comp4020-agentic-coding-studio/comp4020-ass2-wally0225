@@ -60,8 +60,7 @@ The theorem has nothing to say about how a real matching market decides
 which side plays that role. That's last week's gap again, one level up:
 week 7 couldn't say who breaks a standoff; this week, whoever a market
 *labels* the proposer wins the same way, and the model treats that label
-as given rather than fought over. Week 12 is where this, and every prior
-week's gap, come back at once.
+as given rather than fought over.
 
 ## Further reading
 

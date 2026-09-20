@@ -57,5 +57,5 @@ export const courseMeta = slopCourseMetaSchema.parse({
   description:
     "Treats falling in love as a market, with all the frictions, " +
     "information problems, and eventual failures that implies.",
-  tags: ["relationship", "romance economic", "relationship virgin"],
+  tags: ["relationship", "romance economics", "game theory"],
 }) satisfies CourseMetaInput;

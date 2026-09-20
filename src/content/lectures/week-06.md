@@ -25,6 +25,16 @@ it tells you exactly how much looking is enough, which is the one thing
 search-cost intuition alone can't answer. Tutorial 6 runs the rule against
 your own intuition, live.
 
+Priya, from week 2, spent the intervening weeks running the experiment on
+herself for real: eighteen trivia-league candidates, taken in order, no
+do-overs. She rejected the first seven outright on principle — gathering
+information only, exactly as prescribed — and committed to the next one
+who beat the field, a mechanical engineer named Theo, whom she never would
+have met through any channel except the one she'd already spent two years
+testing to destruction. The math held up. Whether Theo enjoyed being "the
+next one who beat the field" is a separate question, and one week 8 is
+much better equipped to ask than week 6 is.
+
 ## Outline
 
 - the problem, the 1/e derivation, and why the threshold is exact rather

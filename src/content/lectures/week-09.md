@@ -73,8 +73,7 @@ something close to their real outside option, for a reason that should
 sound familiar by now: the relationship survives the negotiation, and
 getting caught inflating a threat point is expensive in a way that a bad
 opening line never was. But the model has no term for that cost, and no
-way to tell a real outside option from a well-told story about one. Week
-12 is where this, and every prior week's gap, come back at once.
+way to tell a real outside option from a well-told story about one.
 
 ## Further reading
 

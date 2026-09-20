@@ -72,8 +72,7 @@ That's a different shape of gap again: Weeks 1, 3, 4, 5, and 6 each found
 something the model couldn't price, distinguish, or account for on one
 side of an interaction. This one is a model with *multiple* valid answers
 and no internal way to pick between them — the missing term lives outside
-the game entirely, in convention. Week 12 is where this, and every prior
-week's gap, come back at once.
+the game entirely, in convention.
 
 ## Further reading
 
